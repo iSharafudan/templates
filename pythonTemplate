@@ -1,0 +1,11 @@
+def check(buyer, seller, date, *arguments, **keywords):
+	print(date)
+	print("Buyer: ", buyer)
+	print("Seller: ", seller)
+	print("-" * 40)
+	for arg in arguments:
+		print(" - ", arg)
+	print("-" * 40)
+	keys = sorted(keywords.keys())
+	for kw in keys:
+		print(kw, " costed ", keywords[kw], "rupees")
