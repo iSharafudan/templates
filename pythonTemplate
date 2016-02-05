@@ -1,4 +1,4 @@
-def check(buyer, seller, date, *arguments, **keywords):
+def check(value, buyer, seller, date, *arguments, **keywords):
 	print(date)
 	print("Buyer: ", buyer)
 	print("Seller: ", seller)
@@ -8,4 +8,8 @@ def check(buyer, seller, date, *arguments, **keywords):
 	print("-" * 40)
 	keys = sorted(keywords.keys())
 	for kw in keys:
-		print(kw, " costed ", keywords[kw], "rupees")
+		print(kw, " => ", keywords[kw], value)
+
+#e.g:
+
+check("$", "Dan", "Mall", "30.06.04 12:35:14", "A packet, please!", "Thanks", "Excuse me.",  "What do you need?", "Bye!", ice = 20, toilet = 40, door = 50, egg = 50, milk = 100)
